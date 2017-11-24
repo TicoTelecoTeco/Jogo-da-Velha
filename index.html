@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+ 
+  
+  input.btn-warning {height: 100px;
+         			 width: 100px;
+         			 font-size: 80px;
+         			 text-align: center;
+                     color: black;}
+  
+  input.btn-info { height: 60px;
+  width:100px;}
+         
+  </style>
+  
+  <script>
+  var vez = 1;
+ 
+  
+  function aperta(n) { 
+    var n = document.getElementById(n);
+      var um = document.getElementById("1");
+  var dois = document.getElementById("2");
+  var tres = document.getElementById("3");
+  var quatro = document.getElementById("4");
+  var cinco = document.getElementById("5");
+  var seis = document.getElementById("6");
+  var sete = document.getElementById("7");
+  var oito = document.getElementById("8");
+  var nove = document.getElementById("9");
+  	
+    if ((n.value != "O") && (n.value !="X")) {
+  		if (vez == 1) {
+  			n.value = "X";
+  			vez = 2;}
+  		else {
+  			n.value = "O"
+  			vez = 1;}
+ 	 }
+     
+      if (((um.value == "O")||(um.value == "X"))&&((dois.value == "O")||(dois.value == "X"))&&((tres.value == "O")||(tres.value == "X"))&&((quatro.value == "O")||(quatro.value == "X"))&&((cinco.value == "O")||(cinco.value == "X"))&&((seis.value == "O")||(seis.value == "X"))&&((sete.value == "O")||(sete.value == "X"))&&((oito.value == "O")||(oito.value == "X"))&&((nove.value == "O")||(nove.value == "X"))) {
+  
+  reset();
+  vez = 1;} 
+   
+  
+     if ((um.value == "X") && (dois.value == "X") && (tres.value == "X")) {
+  
+  alert("O jogador 1 venceu");
+  vez = 1;
+  placarx.value =parseInt(placarx.value)+1 ;
+  reset();
+  }
+     if ((quatro.value == "X") && (cinco.value == "X") && (seis.value == "X")) {
+  alert("O jogador 1 venceu");
+  vez = 1;
+  placarx.value =parseInt(placarx.value)+1 ;
+  reset();
+  }
+     if ((sete.value == "X") && (oito.value == "X") && (nove.value == "X")) {
+  alert("O jogador 1 venceu");
+  vez = 1;
+  placarx.value =parseInt(placarx.value)+1 ;
+  reset();
+  }
+     if ((um.value == "X") && (quatro.value == "X") && (sete.value == "X")) {
+  alert("O jogador 1 venceu");
+  vez = 1;
+  placarx.value =parseInt(placarx.value)+1 ;
+  reset();
+  }
+     if ((dois.value == "X") && (cinco.value == "X") && (oito.value == "X")) {
+  alert("O jogador 1 venceu");
+  vez = 1;
+  placarx.value =parseInt(placarx.value)+1 ;
+  reset();
+  }
+     if ((tres.value == "X") && (seis.value == "X") && (nove.value == "X")) {
+  alert("O jogador 1 venceu");
+  vez = 1;
+  reset();
+  }
+     if ((um.value == "X") && (cinco.value == "X") && (nove.value == "X")) {
+  alert("O jogador 1 venceu");
+  vez = 1;
+  reset();
+  }
+     if ((tres.value == "X") && (cinco.value == "X") && (sete.value == "X")) {
+  alert("O jogador 1 venceu");
+  vez = 1;
+  placarx.value =parseInt(placarx.value)+1 ;
+  reset();
+  }
+  
+  
+  
+  
+  if ((um.value == "O") && (dois.value == "O") && (tres.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+     if ((quatro.value == "O") && (cinco.value == "O") && (seis.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+     if ((sete.value == "O") && (oito.value == "O") && (nove.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+     if ((um.value == "O") && (quatro.value == "O") && (sete.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+     if ((dois.value == "O") && (cinco.value == "O") && (oito.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+     if ((tres.value == "O") && (seis.value == "O") && (nove.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+     if ((um.value == "O") && (cinco.value == "O") && (nove.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+     if ((tres.value == "O") && (cinco.value == "O") && (sete.value == "O")) {
+  alert("jogador 2 ganhou");
+  vez = 1;
+  placaro.value =parseInt(placaro.value)+1 ;
+  reset();
+  }
+  }
+  
+  
+  function resetgeral() {
+  		reset();
+        placarx.value="0";
+        placaro.value="0";
+  }
+  
+  function reset() {
+       var um = document.getElementById("1");
+  var dois = document.getElementById("2");
+  var tres = document.getElementById("3");
+  var quatro = document.getElementById("4");
+  var cinco = document.getElementById("5");
+  var seis = document.getElementById("6");
+  var sete = document.getElementById("7");
+  var oito = document.getElementById("8");
+  var nove = document.getElementById("9");
+  vez = 1;
+  
+  um.value = "";
+  dois.value = "";
+  tres.value = "";
+  quatro.value = "";
+  cinco.value = "";
+  seis.value = "";
+  sete.value = "";
+  oito.value = "";
+  nove.value = "";
+  }
+  
+  </script>
+  
+</head>
+<body>
+<center>
+<div class="jumbotron">
+<div class="velha">
+<center><h1>Game of Old</h1></center>
+<input type="button" value="" onclick="aperta(1);" class="btn btn-warning" id="1">
+<input type="button" value="" onclick="aperta(2);" class="btn btn-warning" id="2">
+<input type="button" value="" onclick="aperta(3);" class="btn btn-warning" id="3"><br><br>
+<input type="button" value="" onclick="aperta(4);" class="btn btn-warning" id="4">
+<input type="button" value="" onclick="aperta(5);" class="btn btn-warning" id="5">
+<input type="button" value="" onclick="aperta(6);" class="btn btn-warning" id="6"><br><br>
+<input type="button" value="" onclick="aperta(7);" class="btn btn-warning" id="7">
+<input type="button" value="" onclick="aperta(8);" class="btn btn-warning" id="8">
+<input type="button" value="" onclick="aperta(9);" class="btn btn-warning" id="9"><br><br>
+<input type ="button" value="X" class="btn btn-default" disabled>
+<input type="text" value=0 class="btn btn-danger" disabled id="placarx">
+<input type="text" value=0 class="btn btn-danger" disabled id="placaro">
+<input type ="button" value="O" class="btn btn-default" disabled><br><br>
+<input type ="button" value="reset" id="reset" class="btn btn-info" onclick="resetgeral();">
+</div>
+</div>
+</center>
+
+</body>
+</html>
+maxcdn.bootstrapcdn.com
+/*! * Bootstrap v3.3.7 (http://getbootstrap.com) * Copyright 2011-2016 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-webkit-text-size-adjust:100%;-m...
+maxcdn.bootstrapcdn.com
